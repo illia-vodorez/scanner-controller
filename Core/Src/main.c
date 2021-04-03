@@ -36,7 +36,6 @@ void StartDefaultTask(void const * argument)
     LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_13);
     osDelay(500);
     usbByte = ubGetRecived_USB_Byte(0);
-    //
   }
 }
 

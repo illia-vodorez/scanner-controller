@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "arm_c_cpp_properties",
+            "compilerPath": "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/bin/arm-none-eabi-gcc.exe",
+            "includePath": [
+                "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/arm-none-eabi/include",
+                "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/arm-none-eabi/include/sys",
+                "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/lib**",
+             
+                "${workspaceRoot}/**",
+                
+                "${workspaceRoot}/Drivers/**",
+                "${workspaceRoot}/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                "${workspaceFolder}/Core/Inc/**",
+                "${workspaceFolder}/Core/Src/**",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Sourse/**",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/USB_DEVICE/App/**",
+                "${workspaceFolder}/USB_DEVICE/Target/**"
+                
+            ],
+            "defines": [
+                "USE_HAL_DRIVER",
+                "USE_FULL_LL_DRIVER",
+                "STM32F103C8",
+                "M3",
+                "GCC_ARMCM3"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,12 @@
+{
+	"cortex-debug.enableTelemetry": false,
+	"cortex-debug.JLinkGDBServerPath": "C:\\ARM\\JLink\\JLinkGDBServerCL.exe",
+	"files.associations": {
+		"main.h": "c",
+		"stm32f4xx_hal.h": "c",
+		"stm32f4xx_hal_conf.h": "c",
+		"cmsis_os.h": "c",
+		"chip_init.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
+}

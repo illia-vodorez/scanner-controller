@@ -8,7 +8,7 @@
 #include "usb_device.h"
 
 osThreadId defaultTaskHandle;
-
+uint8_t usbByte;
 void StartDefaultTask(void const * argument);
 
 int main(void)
@@ -27,12 +27,14 @@ void StartDefaultTask(void const * argument)
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
   /* Infinite loop */
+  
   for(;;)
   {
     LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_13);
     osDelay(100);
     LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_13);
     osDelay(100);
+    usbByte = ubGetRecived_USB_Byte(0);
   }
 }
 

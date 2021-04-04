@@ -7,17 +7,14 @@
                 "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/arm-none-eabi/include",
                 "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/arm-none-eabi/include/sys",
                 "C:/ARM/GnuMcuEclipse/ArmEmbeddedGCC/lib**",
-             
+                "C:\\ARM\\GnuMcuEclipse\\ArmEmbeddedGCC\\lib\\gcc\\arm-none-eabi\\8.2.1\\include",
                 "${workspaceRoot}/**",
-                
-                "${workspaceRoot}/Drivers/**",
-                "${workspaceRoot}/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
-                "${workspaceFolder}/Core/Inc/**",
-                "${workspaceFolder}/Core/Src/**",
-                "${workspaceFolder}/Drivers/CMSIS/Include",
-                "${workspaceFolder}/USB_DEVICE/App/**",
-                "${workspaceFolder}/USB_DEVICE/Target/**"
-                
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+                "${workspaceFolder}/USB_DEVICE/Target",
+                "${workspaceFolder}",
+                "${workspaceFolder}/pccf/fw_init",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

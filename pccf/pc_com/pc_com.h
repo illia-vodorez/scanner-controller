@@ -10,7 +10,7 @@
 uint8_t ubGetRecived_USB_Byte(uint8_t ubBufElemOrder);
 
 
-void ubTransmit_USB_Byte(uint8_t ubBufElemOrder);
+uint8_t ubTransmit_USB_Byte(uint8_t ubBufElemOrder);
 
 
 #endif /* __PC_COM_H */

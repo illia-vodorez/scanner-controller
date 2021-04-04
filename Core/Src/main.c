@@ -8,8 +8,14 @@
 #include "usb_device.h"
 
 osThreadId defaultTaskHandle;
+osThreadId commTaskHandle;
+
 uint8_t usbByte;
+
+LL_TIM_InitTypeDef MOT_TIM_Struct;
+
 void StartDefaultTask(void const * argument);
+void StartUSBTask(void const * argument);
 
 int main(void)
 {
@@ -27,15 +33,37 @@ void StartDefaultTask(void const * argument)
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
   /* Infinite loop */
-  
+  osThreadDef(usbTask, StartUSBTask, osPriorityNormal, 0, 512);
+  commTaskHandle = osThreadCreate(osThread(usbTask), NULL);
+
+  //MOT_TIM_Struct = tGetMotTimAddress();
+  vStartMotorTim(); 
+
   for(;;)
   {
     LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_13);
-    ubTransmit_USB_Byte(99);
-    osDelay(500);
+    osDelay(250);
     LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_13);
+    osDelay(250);
+  }
+}
+
+
+void StartUSBTask(void const * argument)
+{
+
+  for(;;)
+  {
+    uint32_t temp = HAL_GetTick();
+    while (ubTransmit_USB_Byte(99) != 0)
+    {
+      if (HAL_GetTick() > temp + 10000) break;
+    }
+    
     osDelay(500);
     usbByte = ubGetRecived_USB_Byte(0);
+    osDelay(500);
+    
   }
 }
 

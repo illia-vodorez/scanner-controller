@@ -9,7 +9,7 @@ uint8_t ubGetRecived_USB_Byte(uint8_t ubBufElemOrder)
 }
 
 
-void ubTransmit_USB_Byte(uint8_t ubBufElemOrder)
+uint8_t ubTransmit_USB_Byte(uint8_t ubBufElemOrder)
 {
-  CDC_Transmit_FS(&ubBufElemOrder, 1);
+  return (uint8_t)CDC_Transmit_FS(&ubBufElemOrder, 1);
 }

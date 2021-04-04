@@ -1,10 +1,10 @@
   /******************************************************************************
-  * @file           : pc_com_private.h
-  * @brief          : 
+  * @file           : Chip_init.h
+  * @brief          :                  
   *****************************************************************************/
 
-#ifndef __PC_COM_PRIVATE_H
-#define __PC_COM_PRIVATE_H
+#ifndef __CHIP_INIT_H
+#define __CHIP_INIT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -27,11 +27,15 @@ extern "C" {
 #include "stm32f1xx.h"
 #include "stm32f1xx_ll_gpio.h"
 
-#include "usb_device.h"
-#include "usbd_cdc_if.h"
+#include "fw_adc.h"
+#include "fw_gpio.h"
+#include "fw_tim.h"
+#include "fw_uart.h"
+#include "fw_spi.h"
+#include "fw_dma.h"
+#include "fw_rcc.h"
 
-uint8_t ubGetRecived_USB_Byte(uint8_t ubBufElemOrder);
-void ubTransmit_USB_Byte(uint8_t ubBufElemOrder);
 
-#endif /* __PC_COM_PRIVATE_H */
+void Chip_Init(void);
 
+#endif /* __CHIP_INIT_H */

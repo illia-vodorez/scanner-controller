@@ -85,15 +85,15 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.c \
-pccf/Chip_init/fw_init/Chip_init.c \
-pccf/Chip_init/pc_com/pc_com.c \
-pccf/Chip_init/fw_perif/adc/fw_adc.c \
-pccf/Chip_init/fw_perif/gpio/fw_gpio.c \
-pccf/Chip_init/fw_perif/tim/fw_tim.c \
-pccf/Chip_init/fw_perif/uart/fw_uart.c \
-pccf/Chip_init/fw_perif/spi/fw_spi.c \
-pccf/Chip_init/fw_perif/dma/fw_dma.c \
-pccf/Chip_init/fw_perif/rcc/fw_rcc.c \
+pccf/fw_init/Chip_init.c \
+pccf/pc_com/pc_com.c \
+pccf/fw_perif/adc/fw_adc.c \
+pccf/fw_perif/gpio/fw_gpio.c \
+pccf/fw_perif/tim/fw_tim.c \
+pccf/fw_perif/uart/fw_uart.c \
+pccf/fw_perif/spi/fw_spi.c \
+pccf/fw_perif/dma/fw_dma.c \
+pccf/fw_perif/rcc/fw_rcc.c \
 
 
 # ASM sources
@@ -166,15 +166,15 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
 -IDrivers/CMSIS/Include \
--Ipccf/Chip_init/fw_init \
--Ipccf/Chip_init/pc_com \
--Ipccf/Chip_init/fw_perif/adc \
--Ipccf/Chip_init/fw_perif/gpio \
--Ipccf/Chip_init/fw_perif/tim \
--Ipccf/Chip_init/fw_perif/uart \
--Ipccf/Chip_init/fw_perif/spi \
--Ipccf/Chip_init/fw_perif/dma \
--Ipccf/Chip_init/fw_perif/rcc \
+-Ipccf/fw_init \
+-Ipccf/pc_com \
+-Ipccf/fw_perif/adc \
+-Ipccf/fw_perif/gpio \
+-Ipccf/fw_perif/tim \
+-Ipccf/fw_perif/uart \
+-Ipccf/fw_perif/spi \
+-Ipccf/fw_perif/dma \
+-Ipccf/fw_perif/rcc \
 
 
 # compile gcc flags

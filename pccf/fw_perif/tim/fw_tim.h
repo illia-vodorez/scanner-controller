@@ -28,8 +28,26 @@ extern "C" {
 #include "stm32f1xx.h"
 #include "stm32f1xx_ll_gpio.h"
 
-void TIM2_Init(LL_TIM_InitTypeDef* TIM_InitStruct);
-void TIM3_Init(LL_TIM_InitTypeDef* TIM_InitStruct);
-void TIM4_Init(LL_TIM_InitTypeDef* TIM_InitStruct);
+#define MOT_TIM TIM2
+
+void MOT_TIM_Init(void);
+
+
+void TIM3_Init
+(
+  LL_TIM_InitTypeDef* TIM_InitStruct
+);
+
+
+void TIM4_Init
+(
+  LL_TIM_InitTypeDef* TIM_InitStruct
+);
+
+
+LL_TIM_InitTypeDef* tGetMotTimAddress (void);
+
+
+void vStartMotorTim(void);
 
 #endif /* __TIM_INIT_H */
